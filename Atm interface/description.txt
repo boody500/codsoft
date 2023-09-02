@@ -1,0 +1,17 @@
+i tried to simulate Atm interface through a GUI Forms and database.
+
+.first the program asks for the card number and password and checks the validity of them through regex pattern card number must be 16 digit characters and password must be 4 digit characters,
+if they are valid:
+
+	- the program will create object from account class which responsible for(add account,check account password,activate account,get and update balance) and checks if the card number is 	  in the database:
+
+		.if found and password is correct (through find account password method), it will directs you to the Atm interface directley
+		.if found and password is not correct (through find account password method), it will ask you to enter it again
+		.if not found that means the card needs to be activated(through activate account method), it will takes you to password page which will ask for password and the confirmation 		 password and check there validity through regex pattern and compare them to each other:
+
+			* if they match the card will saved to database (through add account method) with initial balance = 0, then directs you to Atm interface
+			* if not it will ask you to enter them again
+
+
+
+.At Atm interface, the balance is always displayed at top of form and there is 2 buttons deposit and withdraw once you clicked any of them the other will be disabled for clicking and continue button & text field area will appear to takes the amount you want to deposit/withdraw under conditions which is the amount must be from 5 - 20000 and in withdraw the amount must be less than or equal your balance once you click continue it will checks the conditions if valid balance will be updated and the program will ask you if you want any another process.
